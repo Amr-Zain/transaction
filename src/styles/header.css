@@ -1,0 +1,149 @@
+:root {
+    --white: #ffffff;
+    --blue-medium: #005c98;
+    --blue-light:  #0095f6;
+    --black-light: #262626;
+    --black-faded: #00000059;
+    --gray-base: #616161;
+    --gray-background: #fafafa;
+    --gray-primary: #dbdbdb;
+    --ig-primary-text: 38, 38, 38;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--white);
+    border-bottom:solid 1px  var(--gray-primary);
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    position: fixed;
+    top: 0;
+    display: block;
+    z-index: 150;
+}
+.header-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container .logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+.header-container .logo a{
+    width: 110px;
+    display: flex;
+    
+}
+.conheader-container .logo a img {
+    max-width: 100%;
+}
+.header-container .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.header-container .user .home {
+    color: var(--black-light);
+    font-size: 1.3rem;
+    position: relative;
+    top: -1px;
+}
+.header-container .user .signout{
+    background-color: var(--white);
+    color: var(--black-light);
+    border: none;
+    font-size: 1.4rem;
+    font-weight: normal;
+    position: relative;
+    top:-1px;
+    
+}
+.header-container .user .signout img{
+    width: 4rem;
+    margin: 0;
+    height: 1.5rem;
+    cursor: pointer;
+}
+.header-container .user .user-profile {
+    width: 2rem;
+}
+.header-container .user img {
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.header-container .user .login {
+    height: 2rem;
+    font-size: .875rem;
+    margin: .25rem;
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--blue-light);
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .8rem;
+}
+.header-container .user .signup {
+    height: 2rem;
+    font-size: .875rem;
+    margin: .25rem ;
+    background-color: var(--white);
+    font-weight: bold;
+    color: var(--blue-light);
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.header-container .user a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:400px){
+    .header-container .user {
+        gap: .1rem;
+    }
+    
+}
+@media (min-width:1000px){
+    .header-container {
+        max-width: 1024px;
+    }
+}
+@media (min-width:1280px){
+    .header-container {
+        max-width:1024px
+    }
+}
+@media (min-width:1536px){
+    .header-container {
+        max-width:1536px
+    }
+}
+

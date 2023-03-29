@@ -1,0 +1,170 @@
+:root{
+    --main: #159190;
+    --main-blue-vesion2:#0e4067;
+    --secondary: 14, 64, 103;
+    --text--primary: #262626;
+    --gray--text: #8C8C8C;
+    --back-ground-white: #f5f5f5;
+    --text-color-white: #ffff;
+    --text-dark-blue: #0e4067;
+    --back-buttun-blue: #0e4067;
+    }
+.choose {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border: solid 1px  hsl(0, 0%, 80%); 
+    margin: 6rem 0 2rem 0;
+    padding: 1rem;
+}
+.choose>div{
+    width: '3rem';
+    background-color: var(--main-blue-vesion2);
+    color: var(--text-color-white);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.choose .active {
+    opacity: 80%;
+}
+.add-person, .add-trans{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+input[type='text'], input[type='submit'] {
+    height: 100vh;
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    width: 90%;
+    max-width: 22rem;
+    height: 38px;
+    padding: 0 .5rem;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: .25rem;
+    max-width: 100%;
+}
+
+.table thead tr {
+    background-color: var(--main-blue-vesion2);
+    color: #ffffff;
+}
+.table th,
+.table td {
+    padding: 12px 15px;
+}
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--main-blue-vesion2);
+}
+.table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+    background-color: var(--white);
+    width: 400px;
+    max-width: 90%;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    z-index: 1000;
+    position: fixed;
+}
+
+ .overlay .profileimg img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+ .overlay div {
+    width: 100%;
+    border-bottom:solid 1px  var(--gray-primary);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 14px;
+    color: rgb(38, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .overlay div:last-of-type {
+    border: none;
+    padding: 0;
+}
+.overlay div .unfollow {
+    color: rgb(237,73,86);
+    font-weight: 600;
+    background-color: var(--white);
+    border: none;
+}
+.overlay div .cancel {
+    color: rgb(38, 38, 38);
+    background-color: var(--white);
+    padding: 16px;
+    border: none;
+    
+}
+
+
+
+@media (max-width:520px) {
+   .table{
+    margin: 1rem 0;
+    width: 100%;
+   }
+}
+
+@media (max-width:520px) {
+    .medical-history .choose {
+        gap: .25rem;
+        flex-wrap: wrap;
+    }
+    .medical-history .choose>div{
+        padding:.5rem;
+        font-size: .9rem;
+        flex:  0 0 45%;
+    }
+}
+@media (max-width:780px) {
+    .table {
+        font-size: 1rem;
+    }
+    .table thead th:nth-of-type(5),
+    .table tbody td:nth-of-type(5) {
+        display: none;
+    }
+    
+    
+}
